@@ -13,4 +13,4 @@ def DDOSHistory(request):
 	return render(request,'project/Andrew.html')
 
 def DDOSProtection(request):
-	return render(request,'project/Cheif.html')
+	return render(request,'project/Chief.html')
