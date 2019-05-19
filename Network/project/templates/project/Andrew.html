@@ -1,5 +1,64 @@
-{% extends "blog/base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-{% endblock content %}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: gray;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>DDoS Protection</title>
+</head>
+<body>
+
+<div class="w3-content">
+    
+<div class="topnav">
+  <a href="http://localhost:8000/project/">Home</a>
+  <a href="http://localhost:8000/project/DDOSExplained/">Denial of Service Attacks</a>
+  <a class="active" href="http://localhost:8000/project/DDOSHistory/">Recent DDoS Attacks</a>
+  <a href="http://localhost:8000/project/DDOSProtection/">DDoS Protection</a>
+</div>
+    
+    <h1>Recent DDoS Attacks</h1>
+    
+    <h4> <em> Paul Andrew Domke </em> </h4>
+    
+    <h3>The 2016 Dyn attack</h3>
+    
+    <p>The 2016 Dyn attack was a DDOS attack on the domain name service provider Dyn. This attack was accomplished with tens of millions of ip addresses targeting the systems operated by Dyn. This attack largely affected internet services and platforms in regions of North America and Europe. The sites that were affected include Twitter, Amazon, GitHub, and The New York Times. The groups Anonymous and New World Hackers took responsibility for this attack. The attack was made when a bot-net of tens of millions of ip addresses that belonged to internet connected devices such as; printers, baby cameras, ip cameras, residential gateways, etc. that were infected with Mirari malware made an incredible amount of DNS lookup requests. The Mirari source code was posted online after the attack, it included the default credentials of over 60 devices which enabled the perpetrators to hack many devices. On December 13 2017, the Justice Department announced that the three men, Paras Jha, Josiah White, and Dalton Norman, plead guilty to crimes relating the the cyber attack on Dyn.</p>
+    
+    <h3>The 2015 GitHub attack</h3>
+    
+    <p>The 2015 GitHub attack was a DDoS attack that is believed to be politically motivated. Although the attack was on GitHub two specific urls were targeted. Each of these urls belonged to GitHub repositories whose goals were to thwart Chinese state censorship. The attack originated from devices that visited Baidu, China’s number one search engine. Sites that used Baidu’s analytics services were also part of this attack. They were injecting JavaScript code that would send HTTP requests to the two GitHub pages. It was later found that the malicious code did not come from Baidu. This code was added by and intermediary service.</p>
+    
+    <h3>The 2013 Spamhaus attack</h3>
+    
+    <p>Spamhaus is service that tracks email spammers and spammer related activity. The attack on Spamhaus was targeted initially towards its websites, mail servers, and nameservers. Over the next two weeks their supporting networks and services were attacked, this including a couple of internet exchanges. Two arrest were made following this attack, one being a Dutch national living in Spain, the other A 17 year old male from London.</p>
+    
+    </body>
+</html>

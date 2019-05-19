@@ -1,5 +1,122 @@
-{% extends "blog/base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<style>
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-{% endblock content %}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: gray;
+  color: white;
+}
+</style>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="utf-8">
+      
+      <div class="w3-content">
+          
+<div class="topnav">
+  <a href="http://localhost:8000/project/">Home</a>
+  <a class="active" href="http://localhost:8000/project/DDOSExplained/">Denial of Service Attacks</a>
+  <a href="http://localhost:8000/project/DDOSHistory/">Recent DDoS Attacks</a>
+  <a href="http://localhost:8000/project/DDOSProtection/">DDoS Protection</a>
+</div>
+      
+    <title>Denial of Service Attacks</title>
+    <h1>Denial of Service Attacks</h1>
+  </head>
+  <h3> <em> Joshua Ingram </em> </h3>
+  <body>
+    <h2> Overview </h2>
+      <p>
+      Have you ever been in a situation where you're browsing a website, minding your own business,
+      and your experience seems to come to a grinding hault after being met wit the infamous
+      loading symbol? Sometimes this could be due to a slow internet connection, but if this
+      experience goes on for hours at a time and does not improve, this could be a result
+      of a <em>Denial of Service</em> (DOS) attack.
+      </p>
+
+      <p>
+      These DOS attacks overwhelm a webserver by flooding its connections with abnormally large
+      amounts of web traffic. This attack results in the server being unable to communicate with
+      normal users, causing them to be "denied the service" of using the website. People that
+      perform these attacs could be politcally or socially motivated, motivated by money or
+      resentment towards a specific company, or could be mischievous individuals with no greater intent
+      than creating chaos.
+      </p>
+
+    <h2> Denial of Service vs Distributed Denial of Service </h2>
+      <p>
+      A DOS attack only involves a single end system that is the attackers computer and the connection
+      to the server. This attack still has the intent of overwhelming the server's bandwidth and resources,
+      but is often on a smaller scale. Some damage can be done, but with modern, large servers hosted by
+      companies like Sony, a single system attacking the server is usually not enough to create a largely noticeable effect.
+      </p>
+
+      <p>
+      While this single end system is attacking a server, the server can generally pick out the connection being
+      used to perform this attack by seeing the flood of packets. It can then halt this connection and prevent
+      the attack. However, with this shortcoming of DOS attacks comes an alternative: <em>Distributed Denail of
+      Service</em> (DDOS) attacks. A DDOS attack involves multiple end systems that simultaneously flood a server,
+      drastically increasing the effects seen in a single DOS attack.
+      </p>
+
+      <p>
+      These DDOS attacks are usually orchestrated by an attacker or team of attackers by infecting thousands, if not millions,
+      of individuals' computers using malware. Once this malware is on the collection of infected computers, also known as a
+      botnet, a DDOS attack can be planned and executed by controlling the software to flood the chosen server using the
+      thousands of devices with the malware. The effects of a DDOS
+      attac amplifies that of the DOS attack because there are even greater amounts of end systems being used; resulting in even
+      the largest and most complex servers to be vulnerable to these attacks.
+      </p>
+
+    <h2> Flood Attacks </h2>
+      <p>
+      There are a number of different approaches to DOS attacks, but "flooding" a server and taking
+      up its bandwidth is the most common of ways. One of the most common attacks that takes advantage
+      of internet protocols is known as a SYN flood.
+      </p>
+
+      <h3> SYN Flood </h3>
+      <p>
+      A SYN flood takes advantage of the three-way "handshake" in TCP through the SYN, SYN-ACK, and ACK messages. For simplicity, we will use a single
+      attacking end system to illustrate how it works. In a SYN flood attack the attacker will send repeated SYN messages to its target of interest to all of
+      its target's ports. These SYN messages will be responded to by the target server with SYN-ACK messages from each port. The attacker will not respond
+      to the SYN-ACK message with the usual ACK message, so the connection will be left open. Just before the connection times out, another SYN packet will be sent
+      and this will leave the connection open, increasing the amount of connections being taken up and real users will be denied the use of the webserver because
+      the server will have no open ports or will malfunction.
+      </p>
+
+      <h2> Summary </h2>
+      <p>
+      Denial of Service attacks have been around for years now, creating negative outcomes for the server hosts and the
+      users trying to use the webservers' services. There have been a number of well known take downs of servers due to these
+      types of attacks, some very recently. Although the attacks have been able to become more complex, the organizations
+      running these servers being targeted have started to develop defenses against DOS and DDOS attacks that help prevent them
+      from occuring as often.
+      </p>
+      
+      </div>
+
+  </body>
+</html>
